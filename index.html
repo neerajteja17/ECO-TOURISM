@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Tourism Future Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cover Page -->
+    <section id="cover-page" class="page active">
+        <div class="hero-background">
+            <img src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=2" alt="Eco-tourism landscape">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Welcome to the Future of 
+                <span class="highlight">Eco-Tourism</span>
+            </h1>
+            <p class="hero-description">
+                Discover how travel can help restore our planet. Explore future trends in eco-tourism — 
+                from climate-conscious journeys to large-scale conservation efforts.
+            </p>
+            <button class="cta-button" onclick="navigateToPage('question-page')">
+                Continue <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Question Page -->
+    <section id="question-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h2 class="page-title">What brings you here?</h2>
+                <p class="page-subtitle">Choose your path to discover how you can make a positive impact through eco-tourism</p>
+            </div>
+            <div class="options-grid">
+                <div class="option-card blue" onclick="navigateToPage('climate-page')">
+                    <div class="option-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Travel Enthusiast</h3>
+                        <p>I'm a traveler looking for eco-friendly trips.</p>
+                    </div>
+                </div>
+                <div class="option-card green" onclick="navigateToPage('halfearth-page')">
+                    <div class="option-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Nature Lover</h3>
+                        <p>I want to protect nature and learn about conservation.</p>
+                    </div>
+                </div>
+                <div class="option-card amber" onclick="navigateToPage('regenerative-page')">
+                    <div class="option-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Sustainability Seeker</h3>
+                        <p>I'm curious about how tourism can repair the planet.</p>
+                    </div>
+                </div>
+                <div class="option-card emerald" onclick="navigateToPage('agro-page')">
+                    <div class="option-icon">
+                        <i class="fas fa-wheat-awn"></i>
+                    </div>
+                    <div class="option-content">
+                        <h3>Agro-Eco Explorer</h3>
+                        <p>I'm interested in farming + tourism experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Climate-Aware Travel Page -->
+    <section id="climate-page" class="page topic-page">
+        <div class="topic-hero">
+            <img src="https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2" alt="Sustainable transportation">
+            <div class="topic-hero-overlay">
+                <h2 class="topic-title">Travel Smart, Travel Light</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="topic-content">
+                <div class="intro-section">
+                    <p class="topic-intro">
+                        Your choices as a traveler affect the planet. Learn how to pick routes, transport, 
+                        and stays that leave a lighter footprint while still enjoying incredible adventures.
+                    </p>
+                </div>
+                
+                <div class="qa-section">
+                    <div class="question-block">
+                        <h3>How do you usually travel?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('climate-q1', 'flight')">Flight</button>
+                            <button class="answer-btn" onclick="showAnswer('climate-q1', 'train')">Train</button>
+                            <button class="answer-btn" onclick="showAnswer('climate-q1', 'road')">Road</button>
+                        </div>
+                        <div id="climate-q1" class="answer-content">
+                            <div class="answer flight">
+                                <p><strong>Flying Tips:</strong> Choose direct flights, pack light, consider carbon offsets, and fly economy class for lower emissions per passenger.</p>
+                            </div>
+                            <div class="answer train">
+                                <p><strong>Train Travel:</strong> Excellent choice! Trains produce 80% less CO2 than flights. Book sleeper cars for longer journeys and enjoy the scenic route.</p>
+                            </div>
+                            <div class="answer road">
+                                <p><strong>Road Trips:</strong> Choose fuel-efficient or electric vehicles, carpool when possible, and plan efficient routes to minimize driving time.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-block">
+                        <h3>Would you stay at eco-certified hotels?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('climate-q2', 'yes')">Absolutely</button>
+                            <button class="answer-btn" onclick="showAnswer('climate-q2', 'maybe')">Tell me more</button>
+                            <button class="answer-btn" onclick="showAnswer('climate-q2', 'cost')">Depends on cost</button>
+                        </div>
+                        <div id="climate-q2" class="answer-content">
+                            <div class="answer yes">
+                                <p><strong>Great choice!</strong> Look for certifications like LEED, Green Key, or EarthCheck. These hotels reduce water usage, energy consumption, and waste.</p>
+                            </div>
+                            <div class="answer maybe">
+                                <p><strong>Eco-certified hotels:</strong> Use renewable energy, local materials, support communities, and often provide unique experiences like organic gardens or wildlife conservation programs.</p>
+                            </div>
+                            <div class="answer cost">
+                                <p><strong>Budget-friendly options:</strong> Many eco-hotels offer competitive rates. Look for hostels with green certifications or locally-owned B&Bs that support communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-points">
+                    <h3>Your Climate-Smart Travel Action Plan</h3>
+                    <div class="points-grid">
+                        <div class="point-card">
+                            <i class="fas fa-train"></i>
+                            <h4>Choose Low-Carbon Transport</h4>
+                            <p>Opt for trains, buses, or electric vehicles when possible. For flights, choose direct routes and economy class.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-hotel"></i>
+                            <h4>Support Local Eco-Lodges</h4>
+                            <p>Stay at certified green accommodations that use renewable energy and support local communities.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-tree"></i>
+                            <h4>Offset Your Emissions</h4>
+                            <p>Calculate your travel footprint and invest in verified carbon offset programs that fund reforestation.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-utensils"></i>
+                            <h4>Eat Local & Seasonal</h4>
+                            <p>Choose restaurants that source ingredients locally to reduce food miles and support regional agriculture.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="continue-btn" onclick="navigateToPage('summary-page')">
+                    See the Big Picture <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Half-Earth Vision Page -->
+    <section id="halfearth-page" class="page topic-page">
+        <div class="topic-hero">
+            <img src="https://images.pexels.com/photos/1459505/pexels-photo-1459505.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2" alt="Wildlife conservation">
+            <div class="topic-hero-overlay">
+                <h2 class="topic-title">Protecting Half Our Planet</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="topic-content">
+                <div class="intro-section">
+                    <p class="topic-intro">
+                        The Half-Earth vision aims to conserve half of our planet's lands and seas to safeguard biodiversity. 
+                        Your travel choices can directly support conservation efforts and help preserve wildlife habitats.
+                    </p>
+                </div>
+                
+                <div class="qa-section">
+                    <div class="question-block">
+                        <h3>What type of wildlife experience interests you most?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('halfearth-q1', 'safari')">Safari Adventures</button>
+                            <button class="answer-btn" onclick="showAnswer('halfearth-q1', 'marine')">Marine Life</button>
+                            <button class="answer-btn" onclick="showAnswer('halfearth-q1', 'birds')">Bird Watching</button>
+                        </div>
+                        <div id="halfearth-q1" class="answer-content">
+                            <div class="answer safari">
+                                <p><strong>Safari Tourism:</strong> Choose community-owned conservancies that share tourism revenue with local people, creating incentives to protect wildlife habitats.</p>
+                            </div>
+                            <div class="answer marine">
+                                <p><strong>Marine Conservation:</strong> Visit marine protected areas, choose dolphin-friendly tours, and support coral reef restoration programs through your tourism choices.</p>
+                            </div>
+                            <div class="answer birds">
+                                <p><strong>Birding Tourism:</strong> Visit Important Bird Areas (IBAs), stay at lodges that fund habitat protection, and contribute to citizen science bird counting programs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-block">
+                        <h3>How would you like to contribute to conservation?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('halfearth-q2', 'volunteer')">Hands-on Volunteering</button>
+                            <button class="answer-btn" onclick="showAnswer('halfearth-q2', 'donate')">Financial Support</button>
+                            <button class="answer-btn" onclick="showAnswer('halfearth-q2', 'awareness')">Raise Awareness</button>
+                        </div>
+                        <div id="halfearth-q2" class="answer-content">
+                            <div class="answer volunteer">
+                                <p><strong>Conservation Volunteering:</strong> Join wildlife research projects, help with habitat restoration, or assist in anti-poaching efforts at destinations worldwide.</p>
+                            </div>
+                            <div class="answer donate">
+                                <p><strong>Conservation Funding:</strong> Choose tour operators that donate a portion of profits to conservation, stay at eco-lodges that fund protected areas, or directly support wildlife organizations.</p>
+                            </div>
+                            <div class="answer awareness">
+                                <p><strong>Conservation Advocacy:</strong> Document and share your experiences responsibly, support conservation education programs, and promote sustainable tourism practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-points">
+                    <h3>Your Conservation Action Plan</h3>
+                    <div class="points-grid">
+                        <div class="point-card">
+                            <i class="fas fa-paw"></i>
+                            <h4>Support Wildlife Sanctuaries</h4>
+                            <p>Visit accredited sanctuaries and national parks where entrance fees fund conservation and anti-poaching efforts.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-hands-helping"></i>
+                            <h4>Volunteer for Conservation</h4>
+                            <p>Join citizen science projects, wildlife monitoring programs, or habitat restoration initiatives during your travels.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-donate"></i>
+                            <h4>Donate to Projects</h4>
+                            <p>Support organizations working to establish new protected areas and maintain existing conservation programs.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-camera"></i>
+                            <h4>Practice Responsible Wildlife Viewing</h4>
+                            <p>Follow ethical guidelines, maintain safe distances, and choose tour operators committed to animal welfare.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="continue-btn" onclick="navigateToPage('summary-page')">
+                    See the Big Picture <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regenerative Tourism Page -->
+    <section id="regenerative-page" class="page topic-page">
+        <div class="topic-hero">
+            <img src="https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2" alt="Coral reef restoration">
+            <div class="topic-hero-overlay">
+                <h2 class="topic-title">Tourism That Heals the Planet</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="topic-content">
+                <div class="intro-section">
+                    <p class="topic-intro">
+                        Regenerative tourism goes beyond sustainability to actively repair and restore ecosystems. 
+                        Discover how your travels can leave destinations better than you found them.
+                    </p>
+                </div>
+                
+                <div class="qa-section">
+                    <div class="question-block">
+                        <h3>Which ecosystem restoration appeals to you most?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('regen-q1', 'forest')">Forest Restoration</button>
+                            <button class="answer-btn" onclick="showAnswer('regen-q1', 'coral')">Coral Reef Recovery</button>
+                            <button class="answer-btn" onclick="showAnswer('regen-q1', 'wetland')">Wetland Revival</button>
+                        </div>
+                        <div id="regen-q1" class="answer-content">
+                            <div class="answer forest">
+                                <p><strong>Forest Restoration:</strong> Participate in tree planting programs, support reforestation projects, and stay at lodges that restore degraded forest lands.</p>
+                            </div>
+                            <div class="answer coral">
+                                <p><strong>Coral Restoration:</strong> Join coral nursery programs, support reef-friendly sunscreen initiatives, and choose diving operators that actively restore coral reefs.</p>
+                            </div>
+                            <div class="answer wetland">
+                                <p><strong>Wetland Restoration:</strong> Help restore vital bird habitats, support sustainable fishing communities, and visit sites that demonstrate wetland recovery success stories.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-block">
+                        <h3>How hands-on do you want to be?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('regen-q2', 'active')">Actively Participate</button>
+                            <button class="answer-btn" onclick="showAnswer('regen-q2', 'support')">Financial Support</button>
+                            <button class="answer-btn" onclick="showAnswer('regen-q2', 'learn')">Learn & Observe</button>
+                        </div>
+                        <div id="regen-q2" class="answer-content">
+                            <div class="answer active">
+                                <p><strong>Hands-On Restoration:</strong> Join work camps, volunteer with restoration organizations, and participate in community-led environmental projects.</p>
+                            </div>
+                            <div class="answer support">
+                                <p><strong>Supporting Restoration:</strong> Choose accommodations that fund restoration projects, purchase from businesses that reinvest in environmental healing, and offset your impact through verified restoration programs.</p>
+                            </div>
+                            <div class="answer learn">
+                                <p><strong>Educational Tourism:</strong> Visit restoration sites to learn about techniques, meet scientists and local communities, and understand the challenges and successes of ecosystem recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-points">
+                    <h3>Your Regenerative Tourism Action Plan</h3>
+                    <div class="points-grid">
+                        <div class="point-card">
+                            <i class="fas fa-seedling"></i>
+                            <h4>Join Restoration Programs</h4>
+                            <p>Participate in forest planting, coral restoration, or soil rehabilitation projects during your travels.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-water"></i>
+                            <h4>Support Water Conservation</h4>
+                            <p>Stay at accommodations that harvest rainwater, treat wastewater, and restore local water systems.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Empower Local Communities</h4>
+                            <p>Choose tourism that provides fair wages, supports local businesses, and funds community-led environmental projects.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-recycle"></i>
+                            <h4>Circular Economy Tourism</h4>
+                            <p>Support businesses that eliminate waste, use renewable energy, and create closed-loop systems that benefit the environment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="continue-btn" onclick="navigateToPage('summary-page')">
+                    See the Big Picture <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agro-Eco Tourism Page -->
+    <section id="agro-page" class="page topic-page">
+        <div class="topic-hero">
+            <img src="https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=2" alt="Sustainable farming">
+            <div class="topic-hero-overlay">
+                <h2 class="topic-title">Farm-to-Table Adventures</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="topic-content">
+                <div class="intro-section">
+                    <p class="topic-intro">
+                        Agro-eco tourism combines sustainable agriculture with travel experiences. 
+                        Connect with local farmers, learn organic practices, and support food systems that regenerate the land.
+                    </p>
+                </div>
+                
+                <div class="qa-section">
+                    <div class="question-block">
+                        <h3>What type of farming experience interests you?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('agro-q1', 'organic')">Organic Farming</button>
+                            <button class="answer-btn" onclick="showAnswer('agro-q1', 'permaculture')">Permaculture</button>
+                            <button class="answer-btn" onclick="showAnswer('agro-q1', 'traditional')">Traditional Methods</button>
+                        </div>
+                        <div id="agro-q1" class="answer-content">
+                            <div class="answer organic">
+                                <p><strong>Organic Farming:</strong> Visit certified organic farms, learn about natural pest control, soil health, and participate in chemical-free food production.</p>
+                            </div>
+                            <div class="answer permaculture">
+                                <p><strong>Permaculture Systems:</strong> Experience holistic farming that mimics natural ecosystems, focuses on sustainability, and creates self-sufficient agricultural systems.</p>
+                            </div>
+                            <div class="answer traditional">
+                                <p><strong>Traditional Agriculture:</strong> Learn ancient farming wisdom from indigenous communities, discover heritage seed varieties, and support cultural preservation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-block">
+                        <h3>How do you want to engage with farming communities?</h3>
+                        <div class="answer-buttons">
+                            <button class="answer-btn" onclick="showAnswer('agro-q2', 'work')">Farm Work Experience</button>
+                            <button class="answer-btn" onclick="showAnswer('agro-q2', 'stay')">Farm Stay</button>
+                            <button class="answer-btn" onclick="showAnswer('agro-q2', 'learn')">Educational Tours</button>
+                        </div>
+                        <div id="agro-q2" class="answer-content">
+                            <div class="answer work">
+                                <p><strong>Working Farms:</strong> Join harvest seasons, learn hands-on farming techniques, and contribute directly to sustainable food production while earning cultural exchange experiences.</p>
+                            </div>
+                            <div class="answer stay">
+                                <p><strong>Farm Accommodations:</strong> Stay on working farms, enjoy fresh farm-to-table meals, participate in daily activities, and experience rural life authentically.</p>
+                            </div>
+                            <div class="answer learn">
+                                <p><strong>Educational Farm Tours:</strong> Visit demonstration farms, attend workshops on sustainable agriculture, and learn about innovative farming technologies and practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-points">
+                    <h3>Your Agro-Eco Tourism Action Plan</h3>
+                    <div class="points-grid">
+                        <div class="point-card">
+                            <i class="fas fa-tractor"></i>
+                            <h4>Support Regenerative Farms</h4>
+                            <p>Visit farms that restore soil health, sequester carbon, and increase biodiversity through sustainable practices.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-apple-alt"></i>
+                            <h4>Farm-to-Table Dining</h4>
+                            <p>Choose restaurants and accommodations that source ingredients locally and support regional food systems.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Learn Sustainable Practices</h4>
+                            <p>Participate in workshops on composting, natural farming, seed saving, and sustainable food production.</p>
+                        </div>
+                        <div class="point-card">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Support Farming Communities</h4>
+                            <p>Buy directly from farmers, support fair trade initiatives, and invest in community-supported agriculture programs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="continue-btn" onclick="navigateToPage('summary-page')">
+                    See the Big Picture <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Page -->
+    <section id="summary-page" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h2 class="page-title">Your Choices Shape the Future of Travel</h2>
+                <p class="page-subtitle">Every journey is an opportunity to make a positive impact on our planet</p>
+            </div>
+            
+            <div class="summary-grid">
+                <div class="summary-card blue">
+                    <div class="summary-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Climate-Aware Travel</h3>
+                    <p>How to travel with lower carbon impact through smart transportation choices, eco-friendly accommodations, and carbon offsetting.</p>
+                </div>
+                
+                <div class="summary-card green">
+                    <div class="summary-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Half-Earth Vision</h3>
+                    <p>Why conserving half the planet matters and how tourism can support wildlife protection and biodiversity conservation.</p>
+                </div>
+                
+                <div class="summary-card amber">
+                    <div class="summary-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Regenerative Tourism</h3>
+                    <p>How tourism can restore ecosystems, heal damaged environments, and leave destinations better than before.</p>
+                </div>
+                
+                <div class="summary-card emerald">
+                    <div class="summary-icon">
+                        <i class="fas fa-wheat-awn"></i>
+                    </div>
+                    <h3>Agro-Eco Tourism</h3>
+                    <p>The role of sustainable agriculture in tourism, connecting travelers with local food systems and farming communities.</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>Ready to Make a Difference?</h3>
+                <div class="cta-buttons">
+                    <a href="#" class="cta-btn primary" onclick="showResources()">
+                        <i class="fas fa-external-link-alt"></i>
+                        Learn More
+                    </a>
+                    <button class="cta-btn secondary" onclick="sharePortal()">
+                        <i class="fas fa-share-alt"></i>
+                        Share this Portal
+                    </button>
+                    <button class="cta-btn tertiary" onclick="navigateToPage('cover-page')">
+                        <i class="fas fa-redo"></i>
+                        Start Over
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Modal -->
+    <div id="resources-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Eco-Tourism Resources</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="resource-category">
+                    <h4>Climate-Aware Travel</h4>
+                    <ul>
+                        <li><a href="https://www.carbonfund.org/" target="_blank">Carbon Offset Programs</a></li>
+                        <li><a href="https://www.greenkey.global/" target="_blank">Green Hotel Certifications</a></li>
+                        <li><a href="https://www.seat61.com/" target="_blank">Train Travel Planning</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h4>Conservation Tourism</h4>
+                    <ul>
+                        <li><a href="https://www.worldwildlife.org/" target="_blank">World Wildlife Fund</a></li>
+                        <li><a href="https://www.conservation.org/" target="_blank">Conservation International</a></li>
+                        <li><a href="https://www.nationalgeographic.org/society/" target="_blank">National Geographic Society</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h4>Regenerative Tourism</h4>
+                    <ul>
+                        <li><a href="https://www.regenerativetravel.com/" target="_blank">Regenerative Travel</a></li>
+                        <li><a href="https://sustainabletravel.org/" target="_blank">Sustainable Travel International</a></li>
+                        <li><a href="https://www.responsibletravel.com/" target="_blank">Responsible Travel</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h4>Agro-Eco Tourism</h4>
+                    <ul>
+                        <li><a href="https://wwoof.net/" target="_blank">WWOOF (Farm Volunteering)</a></li>
+                        <li><a href="https://www.farmstayus.com/" target="_blank">Farm Stay Accommodations</a></li>
+                        <li><a href="https://www.slowfood.com/" target="_blank">Slow Food Movement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
